@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import MainArea from './components/MainArea';
 import './App.css';
 
 function App() {
+  const [activePage, setActivePage] = useState('energy');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-shell">
+      <Sidebar activePage={activePage} onNavigate={setActivePage} />
+      <MainArea activePage={activePage} />
     </div>
   );
 }
