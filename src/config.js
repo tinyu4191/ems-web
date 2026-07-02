@@ -1,4 +1,4 @@
-const GRAFANA = process.env.REACT_APP_GRAFANA_URL || 'http://localhost:3000';
+const GRAFANA = process.env.REACT_APP_GRAFANA_URL || '/grafana';
 
 export const GRAFANA_URL = GRAFANA;
 
