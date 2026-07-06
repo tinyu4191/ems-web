@@ -1,8 +1,10 @@
 import React from 'react';
 import { DASHBOARDS } from '../config';
+import { useLanguage } from '../context/LanguageContext';
 import './MainArea.css';
 
 function MainArea({ activePage }) {
+  const { t } = useLanguage();
   const url = DASHBOARDS[activePage];
 
   if (!url) {
@@ -10,8 +12,8 @@ function MainArea({ activePage }) {
       <div className="main-area">
         <div className="coming-soon">
           <div className="coming-soon-icon">🚧</div>
-          <div className="coming-soon-title">功能開發中</div>
-          <div className="coming-soon-sub">此模塊將於後續版本推出</div>
+          <div className="coming-soon-title">{t.comingSoon.title}</div>
+          <div className="coming-soon-sub">{t.comingSoon.sub}</div>
         </div>
       </div>
     );

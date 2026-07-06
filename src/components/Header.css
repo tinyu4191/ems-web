@@ -1,0 +1,43 @@
+.app-header {
+  height: 52px;
+  min-height: 52px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.header-brand { display: flex; align-items: center; gap: 10px; }
+
+.header-logo-icon {
+  width: 28px; height: 28px; border-radius: 6px;
+  background: #1a3a5c; display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+
+.header-logo-img {
+  width: 28px; height: 28px; border-radius: 6px;
+  object-fit: contain; background: #fff;
+}
+
+.header-company-name { font-size: 14px; font-weight: 600; color: #fff; }
+
+.header-actions { display: flex; align-items: center; gap: 8px; }
+
+.lang-switch {
+  display: flex; align-items: center; gap: 4px;
+  background: #222; border: 1px solid #2a2a2a; border-radius: 6px;
+  padding: 5px 10px; cursor: pointer; font-size: 12px; color: #888;
+}
+.lang-switch:hover { border-color: #3a3a3a; }
+.lang-active { color: #4da6ff; font-weight: 600; }
+.lang-divider { color: #444; }
+
+.header-icon-btn {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: #222; border: 1px solid #2a2a2a; cursor: pointer;
+  font-size: 14px; display: flex; align-items: center; justify-content: center; color: #888;
+}
+.header-icon-btn:hover { border-color: #3a3a3a; color: #ccc; }
