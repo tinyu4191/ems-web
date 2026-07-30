@@ -9,6 +9,7 @@ function Sidebar({ activePage, onNavigate }) {
     { key: 'energy',  label: t.nav.energy,  icon: '⚡' },
     { key: 'demand',  label: t.nav.demand,  icon: '📈' },
     { key: 'tariff',  label: t.nav.tariff,  icon: '💰' },
+    { key: 'monitor', label: t.nav.monitor, icon: '📊' },
     { key: 'history', label: t.nav.history, icon: '📄' },
     { key: 'alert',   label: t.nav.alert,   icon: '🔔', badge: 3 },
   ];
@@ -22,13 +23,13 @@ function Sidebar({ activePage, onNavigate }) {
 
       <nav className="sidebar-nav">
         <div className="nav-section-label">{t.section.monitor}</div>
-        {NAV_ITEMS.slice(0, 3).map(item => (
+        {NAV_ITEMS.slice(0, 4).map(item => (
           <NavItem key={item.key} item={item} active={activePage === item.key} onClick={onNavigate} />
         ))}
         <div className="nav-section-label" style={{ marginTop: 16 }}>{t.section.report}</div>
-        <NavItem item={NAV_ITEMS[3]} active={activePage === 'history'} onClick={onNavigate} />
+        <NavItem item={NAV_ITEMS[4]} active={activePage === 'history'} onClick={onNavigate} />
         <div className="nav-section-label" style={{ marginTop: 16 }}>{t.section.system}</div>
-        <NavItem item={NAV_ITEMS[4]} active={activePage === 'alert'} onClick={onNavigate} />
+        <NavItem item={NAV_ITEMS[5]} active={activePage === 'alert'} onClick={onNavigate} />
       </nav>
 
       <div className="sidebar-footer">
