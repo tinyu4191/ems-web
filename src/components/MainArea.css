@@ -61,3 +61,84 @@
 .monitor-tab-btn:hover {
   background: #444;
 }
+
+.report-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 16px;
+  background: #1e1e1e;
+  border-bottom: 1px solid #2a2a2a;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.report-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.report-toolbar-label {
+  color: #888;
+  white-space: nowrap;
+}
+
+.report-period-select {
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: #eee;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.report-zone-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.report-zone-checkbox:hover {
+  background: #2a2a2a;
+}
+
+.report-zone-checkbox input {
+  accent-color: #0d6efd;
+  cursor: pointer;
+}
+
+.report-download-btn {
+  margin-left: auto;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 4px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.report-download-btn:hover:not(:disabled) {
+  background: #0b5ed7;
+}
+
+.report-download-btn:disabled {
+  background: #444;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.report-download-error {
+  color: #ff6b6b;
+  font-size: 12px;
+}

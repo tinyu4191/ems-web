@@ -5,7 +5,7 @@ export const DASHBOARDS = {
   demand: null,
   tariff: null,
   monitor: null, // monitor 改用 MONITOR_DASHBOARDS，這裡不再直接使用
-  history: null,
+  history: `${GRAFANA_URL}/d/report-electricity/report-electricity?orgId=1&kiosk=true&var-report_period=today&var-zone=$__all`,
   alert: null,
 };
 
