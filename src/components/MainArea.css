@@ -3,6 +3,8 @@
   height: 100vh;
   overflow: hidden;
   background: #111;
+  display: flex;
+  flex-direction: column;
 }
 
 .grafana-frame {
@@ -40,7 +42,7 @@
   display: flex;
   gap: 8px;
   padding: 8px 12px;
-  background: #1e1e1e; /* 依你現有主題色調整 */
+  background: #1e1e1e;
 }
 
 .monitor-tab-btn {
@@ -54,7 +56,7 @@
 }
 
 .monitor-tab-btn.active {
-  background: #0d6efd; /* 依你現有主題色調整 */
+  background: #0d6efd;
   color: #fff;
 }
 
@@ -86,14 +88,47 @@
   white-space: nowrap;
 }
 
-.report-period-select {
-  padding: 5px 10px;
+.report-energy-btn,
+.report-period-btn {
+  padding: 5px 12px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: #ccc;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.report-energy-btn.active,
+.report-period-btn.active {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+}
+
+.report-energy-btn:hover:not(.active),
+.report-period-btn:hover:not(.active) {
+  background: #333;
+}
+
+.report-date-input {
+  padding: 6px 10px;
   border: 1px solid #333;
   border-radius: 4px;
   background: #2a2a2a;
   color: #eee;
   font-size: 13px;
-  cursor: pointer;
+  color-scheme: dark;
+}
+
+.report-date-input:hover {
+  border-color: #555;
+}
+
+.report-date-input:focus {
+  outline: none;
+  border-color: #0d6efd;
 }
 
 .report-zone-checkbox {
@@ -113,6 +148,74 @@
 .report-zone-checkbox input {
   accent-color: #0d6efd;
   cursor: pointer;
+}
+
+.report-zone-dropdown-wrap {
+  position: relative;
+}
+
+.report-zone-dropdown-btn {
+  padding: 6px 14px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: #ddd;
+  font-size: 13px;
+  cursor: pointer;
+  min-width: 110px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-zone-dropdown-btn:hover {
+  border-color: #555;
+  background: #333;
+}
+
+.report-zone-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 20;
+  background: #232323;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 6px;
+  width: 220px;
+  max-height: 360px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.report-zone-dropdown-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.report-zone-dropdown-panel::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+.report-zone-dropdown-panel .report-zone-checkbox {
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.report-zone-dropdown-panel .report-zone-checkbox:hover {
+  background: #2f2f2f;
+}
+
+.report-zone-dropdown-divider {
+  height: 1px;
+  background: #3a3a3a;
+  margin: 6px 4px;
 }
 
 .report-download-btn {
@@ -141,4 +244,57 @@
 .report-download-error {
   color: #ff6b6b;
   font-size: 12px;
+}
+
+.report-status {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.report-table-wrap {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}
+
+.report-table-title {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.report-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+  color: #ddd;
+}
+
+.report-table th,
+.report-table td {
+  padding: 8px 14px;
+  text-align: right;
+  border-bottom: 1px solid #2a2a2a;
+  white-space: nowrap;
+}
+
+.report-table th:first-child,
+.report-table td:first-child {
+  text-align: left;
+  color: #999;
+}
+
+.report-table thead th {
+  color: #888;
+  font-weight: 500;
+  border-bottom: 1px solid #333;
+}
+
+.report-table tfoot td {
+  font-weight: 600;
+  color: #fff;
+  border-top: 2px solid #333;
+  border-bottom: none;
 }
