@@ -72,7 +72,7 @@
   background: #1e1e1e;
   border-bottom: 1px solid #2a2a2a;
   flex-wrap: wrap;
-  font-size: 14px;
+  font-size: 15px;
   color: #ccc;
 }
 
@@ -95,7 +95,7 @@
   border-radius: 4px;
   background: #2a2a2a;
   color: #ccc;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -118,7 +118,7 @@
   border-radius: 4px;
   background: #2a2a2a;
   color: #eee;
-  font-size: 14px;
+  font-size: 15px;
   color-scheme: dark;
 }
 
@@ -160,7 +160,7 @@
   border-radius: 4px;
   background: #2a2a2a;
   color: #ddd;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
   min-width: 110px;
   text-align: left;
@@ -205,7 +205,7 @@
 .report-zone-dropdown-panel .report-zone-checkbox {
   padding: 8px 10px;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .report-zone-dropdown-panel .report-zone-checkbox:hover {
@@ -225,7 +225,7 @@
   border-radius: 4px;
   background: #0d6efd;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
@@ -261,14 +261,14 @@
 
 .report-table-title {
   color: #ccc;
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 12px;
 }
 
 .report-table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 13px;
+  font-size: 15px;
   color: #ddd;
 }
 
@@ -297,4 +297,50 @@
   color: #fff;
   border-top: 2px solid #333;
   border-bottom: none;
+}
+
+.solar-linkout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 40px;
+  text-align: center;
+}
+
+.solar-linkout-icon {
+  color: #f5a623;
+  filter: drop-shadow(0 0 10px rgba(245, 166, 35, 0.4));
+}
+
+.solar-linkout-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #eee;
+}
+
+.solar-linkout-desc {
+  font-size: 14px;
+  color: #888;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.solar-linkout-btn {
+  margin-top: 10px;
+  padding: 10px 24px;
+  border-radius: 6px;
+  background: #f5a623;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.solar-linkout-btn:hover {
+  background: #ffb84d;
+  box-shadow: 0 0 16px rgba(245, 166, 35, 0.4);
 }

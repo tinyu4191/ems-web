@@ -16,6 +16,12 @@ export const translations = {
       electricity: '電力',
       water: '水',
       steam: '蒸氣',
+      solar: '太陽能',
+    },
+    monitorSolar: {
+      title: '太陽能監控系統',
+      desc: '太陽能監控由 FusionSolar 平台提供，該平台不支援嵌入顯示，請點擊下方按鈕於新分頁開啟。',
+      button: '前往 FusionSolar 監控平台',
     },
     report: {
       energyLabel: '能源：',
@@ -62,6 +68,12 @@ export const translations = {
       electricity: 'Electricity',
       water: 'Water',
       steam: 'Steam',
+      solar: 'Solar',
+    },
+    monitorSolar: {
+      title: 'Solar Monitoring System',
+      desc: 'Solar monitoring is provided by the FusionSolar platform, which does not support embedding. Please click the button below to open it in a new tab.',
+      button: 'Open FusionSolar Platform',
     },
     report: {
       energyLabel: 'Energy:',
